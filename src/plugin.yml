@@ -1,0 +1,32 @@
+## YAML Template.
+main: se.myller.onduty.OnDuty
+name: OnDuty
+version: 0.7
+author: Mylleranton
+prefix: 'OnDuty'
+website: http://dev.bukkit.org/server-mods/onduty
+permissions:
+  duty.use:
+    default: op
+    description: "Permitted to use /duty on/off"
+  duty.check:
+    default: op
+    description: "Permitted to check players stats"
+  duty.delp:
+    default: op
+    description: "Permitted to delete players log-files"
+  duty.delall:
+    default: op
+    description: "Permitted to delete all log-files"
+  duty.list:
+    default: false
+    description: "Permitted to view a list containing players in duty"
+  duty.force:
+    default: op
+    description: "Permitted to force players duty status"
+commands:
+  duty:
+    description: "Basic command for OnDuty"
+    permission: duty.use
+    permission-message: "You don´t have the required permission: <permission>"
+    usage: "Type /duty help to view the help"
