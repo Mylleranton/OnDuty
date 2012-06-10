@@ -33,6 +33,10 @@ public class PlayerListener implements Listener {
 	    if (new FileHandler(this.plugin).check(p)) {
 		FileHandler.setLatestLogin(p);
 	    }
+	    if (UpdateChecker.newVersionAvailable) {
+		e.getPlayer().sendMessage(ChatColor.AQUA + "New version available for OnDuty: " + UpdateChecker.newVersion);
+		e.getPlayer().sendMessage(ChatColor.AQUA + "Please check: http://dev.bukkit.org/server-mods/onduty");
+	    }
 	}
     }
     

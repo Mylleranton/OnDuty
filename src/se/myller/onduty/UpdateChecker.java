@@ -16,13 +16,13 @@ public class UpdateChecker implements Runnable {
     public UpdateChecker(OnDuty ins) {
 	this.m = ins;
     }
-    private String version = m.getDescription().getVersion();
     public static boolean newVersionAvailable = false;
+    public static String newVersion;
     
     @Override
     public void run() {
 	try {
-	    final String address = "";
+	    final String address = "https://raw.github.com/Mylleranton/OnDuty/master/src/Version.txt";
 	    final URL url = new URL(address.replace(" ", "%20"));
 	    final URLConnection conn = url.openConnection();
 	    conn.setConnectTimeout(8000);
@@ -30,9 +30,10 @@ public class UpdateChecker implements Runnable {
 	    BufferedReader br = new BufferedReader(new InputStreamReader(conn.getInputStream()));
 	    String newestVersion = br.readLine();
 	    if (newestVersion != null) {
-		if (!version.equals(newestVersion)) {
+		if (!m.getDescription().getVersion().equals(newestVersion)) {
 		    newVersionAvailable = true;
-		    OnDuty.log.info("New Version available! Check: ");
+		    newVersion = newestVersion;
+		    OnDuty.log.info("New Version available: " + newestVersion + "! Check: ");
 		    OnDuty.log.info("http://dev.bukkit.org/server-mods/onduty");
 		}
 	    }
