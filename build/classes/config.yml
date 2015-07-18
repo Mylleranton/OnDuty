@@ -1,9 +1,0 @@
-## YAML Template.
-# Adding entry
-Disabled_Commands:
-  - save-all
-  - reload
-  - give
-Main:
-  Debug: false
-    
