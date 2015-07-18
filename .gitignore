@@ -1,4 +1,8 @@
 /build
 /dist
 /nbproject
+/bin
 *.class
+.settings
+.project
+.classpath
