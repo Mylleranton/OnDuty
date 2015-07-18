@@ -1,9 +1,8 @@
 package se.myller.onduty;
 
-import java.io.File;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.logging.Logger;
+
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
 

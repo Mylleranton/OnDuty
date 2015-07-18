@@ -5,7 +5,14 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-import se.myller.onduty.Commands.*;
+
+import se.myller.onduty.Commands.CommandCHECK;
+import se.myller.onduty.Commands.CommandDELETE;
+import se.myller.onduty.Commands.CommandFORCE;
+import se.myller.onduty.Commands.CommandHELP;
+import se.myller.onduty.Commands.CommandLIST;
+import se.myller.onduty.Commands.CommandOFF;
+import se.myller.onduty.Commands.CommandON;
 
 /**
  *
@@ -13,9 +20,7 @@ import se.myller.onduty.Commands.*;
  */
 public class CommandHandler implements CommandExecutor {
 
-    private OnDuty plugin;
     public CommandHandler(OnDuty instance) {
-	this.plugin = instance;
     }
 
     @Override
